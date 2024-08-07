@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/htmx.org@2.0.1"
+    integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Go + htmX Todo</title>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+  <div class="bg-white p-6 rounded shadow-lg w-full max-w-sm">
+
+    <form hx-swap="beforeend" hx-target="#todo-list" hx-post="/add-todo" class="flex flex-col">
+      <label for="message" class="mb-2 text-gray-700">Todo:</label>
+      <input type="text" name="message" id="message" placeholder="What needs to be done?" required
+        class="p-2 border rounded mb-4">
+      <button type="submit" class="bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition">Create</button>
+    </form>
+    <ul id="todo-list" class="mt-4">
+      {{range .Todos}}
+      {{block "todo-list-element" .}}
+      <li class="py-2 border-b">{{.Message}}</li>
+      {{end}}
+      {{end}}
+    </ul>
+  </div>
+</body>
+
+</html>
