@@ -17,8 +17,8 @@ This is a simple Todo application built using Go and htmx, with Tailwind CSS for
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/go-htmx-todo.git
-    cd go-htmx-todo
+    git clone https://github.com/7afde/Go-htmX-Todo.git
+    cd Go-htmX-Todo
     ```
 
 2. **Install Go:**
