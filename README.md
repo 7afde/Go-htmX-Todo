@@ -34,10 +34,12 @@ This is a simple Todo application built using Go and htmx, with Tailwind CSS for
 
 ## Project Structure
 
-Go-htmX-todo/
-├── index.html # HTML template for the application
-├── main.go # Go source file containing the server logic
-└── README.md # Project documentation
+```markdown
+Go-htmX-Todo/
+├── index.html  # HTML template for the application
+├── main.go     # Go source file containing the server logic
+└── README.md   # Project documentation
+```
 
 ## Contributing
 
